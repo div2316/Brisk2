@@ -69,7 +69,7 @@ def _candidates(seed: int) -> dict:
     return {
         "logistic_regression": LogisticRegression(max_iter=3000, random_state=seed),
         "random_forest": RandomForestClassifier(n_estimators=300, min_samples_leaf=3,
-                                                random_state=seed, n_jobs=-1),
+                                                random_state=seed, n_jobs=1),
         "hist_gradient_boosting": HistGradientBoostingClassifier(max_iter=200, learning_rate=0.05,
                                                                  random_state=seed),
     }
